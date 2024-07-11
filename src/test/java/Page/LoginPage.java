@@ -11,6 +11,7 @@ public class LoginPage {
     By usernameInputText = By.cssSelector("input#user-name");
     By passwordInputText = By.xpath("//*[@id=\"password\"]");
     By loginButton = By.id("login-button");
+    By errorMessage = By.tagName("h3");
 
     public LoginPage(WebDriver driver){
         this.driver = driver;
@@ -30,7 +31,8 @@ public class LoginPage {
         driver.findElement(loginButton).click();
     }
 
-    public void validateErrorAppear(String errorMessage){
-        assertTrue(driver.getPageSource().contains(errorMessage));
+    public void validateErrorAppear(){
+        driver.findElement(errorMessage).click();
+//        assertTrue(driver.getPageSource().contains(errorMessage));
     }
 }

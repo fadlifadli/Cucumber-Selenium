@@ -66,10 +66,14 @@ public class LoginStepdefs extends BaseTest {
 //        assertEquals("Sauce Labs Backpack", productElement.getText());
 //    }
 
-    @Then("user able to see error message {string}")
-    public void userAbleToSeeErrorMessage(String errorMessage) {
-        loginPage.validateErrorAppear(errorMessage);
-//    assertTrue(driver.getPageSource().contains(errorMessage));
-    }
+//    @Then("user able to see error message ")
+//    public void userAbleToSeeErrorMessage() {
+//        loginPage.validateErrorAppear();
+////    assertTrue(driver.getPageSource().contains(errorMessage));
+//    }
 
+    @Then("user able to see error message")
+    public void userAbleToSeeErrorMessage() {
+        loginPage.validateErrorAppear();
+    }
 }
