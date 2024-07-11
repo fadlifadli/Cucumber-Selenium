@@ -57,21 +57,6 @@ public class LoginStepdefs extends BaseTest {
 //        driver.findElement(loginButton).click();
     }
 
-//    @Then("user is on homepage")
-//    public void userIsOnHomepage() {
-//
-//        By backPackItem = By.xpath("//*[@id=\"item_4_title_link\"]/div");
-//        WebElement productElement = driver.findElement(backPackItem);
-//        assertTrue(productElement.isDisplayed());
-//        assertEquals("Sauce Labs Backpack", productElement.getText());
-//    }
-
-//    @Then("user able to see error message ")
-//    public void userAbleToSeeErrorMessage() {
-//        loginPage.validateErrorAppear();
-////    assertTrue(driver.getPageSource().contains(errorMessage));
-//    }
-
     @Then("user able to see error message")
     public void userAbleToSeeErrorMessage() {
         loginPage.validateErrorAppear();
