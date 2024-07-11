@@ -1,9 +1,12 @@
 package Page;
 
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.testng.AssertJUnit.assertEquals;
 
 public class LoginPage {
     WebDriver driver;
@@ -33,6 +36,11 @@ public class LoginPage {
 
     public void validateErrorAppear(){
         driver.findElement(errorMessage).click();
-//        assertTrue(driver.getPageSource().contains(errorMessage));
+        Assertions.assertEquals("Epic sadface: Username and password do not match any user in this service", "Epic sadface: Username and password do not match any user in this service");
+
+        WebElement productElement = driver.findElement(errorMessage);
+        assertTrue(productElement.isDisplayed());
+        assertEquals("Epic sadface: Username and password do not match any user in this service", productElement.getText());
+
     }
 }

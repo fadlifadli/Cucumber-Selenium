@@ -21,6 +21,6 @@ public class HomePage {
         WebElement productElement = driver.findElement(backPackItem);
         assertTrue(productElement.isDisplayed());
         assertEquals("Sauce Labs Backpack", productElement.getText());
-//        assertTrue(driver.findElement(backPackItem).isDisplayed());
+        assertTrue(driver.findElement(backPackItem).isDisplayed());
     }
 }
