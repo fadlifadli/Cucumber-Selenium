@@ -33,3 +33,11 @@ jobs:
     # Execute gradle command for running cucumber test
     - name: Execute Test
       run: ./gradlew cucumber
+
+    # report
+    - name: create-report
+      uses: michaelhenry/create-report@v2.0.2
+      with: 
+        title: "Junit report"
+        path: reports/sample.junit # optional
+        format: junit # optional, default is markdown
