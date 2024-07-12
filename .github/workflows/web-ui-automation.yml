@@ -40,3 +40,9 @@ jobs:
       with:
           name: Test Report
           path: reports/cucumber.html
+    
+    # Report to Slack
+    - name: Send report to slack
+      run: pytest setting/notif_slack.py
+      env:
+          PYTEST_WEBOOKSLACKRAJAONGKIR2: ${{ secrets.WEBOOKSLACKRAJAONGKIR2 }}
