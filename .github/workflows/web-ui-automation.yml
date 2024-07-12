@@ -39,7 +39,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
           name: Test Report
-          path: reports/cucumber/index.html
+          path: reports/cucumber.html
     
     # report
     # - name: create-report
