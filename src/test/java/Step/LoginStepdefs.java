@@ -8,6 +8,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.time.Duration;
+
 public class LoginStepdefs extends BaseTest {
 
 //    public static WebDriver driver;
@@ -60,5 +62,22 @@ public class LoginStepdefs extends BaseTest {
     @Then("user able to see error message")
     public void userAbleToSeeErrorMessage() {
         loginPage.validateErrorAppear();
+    }
+
+    @Then("User clik button menu")
+    public void userClikButtonMenu() {
+        loginPage.userBttnMenu();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
+    }
+
+    @Then("user Click textlink Logout")
+    public void userClickTextlinkLogout() {
+        loginPage.TextlinkLogout();
+    }
+
+
+    @When("verifikasi page Login")
+    public void verifikasiPageLogin() {
+        loginPage.LoginButton();
     }
 }
